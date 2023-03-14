@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/may.css">
+    <style>
+        .table-1{
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+
+        }
+        .table-1 caption{
+            font-size: 2rem;
+            font-weight:700;
+            text-align: left;
+            padding-left: 25px;
+        }
+
+        .table-1 th, .table-1 td{
+            border:1px solid red;
+            padding: 5px; 
+        }
+        .table-1 thead, .table-1 tfoot{
+            background-color: #f0f0f0;
+        }
+        
+        .table-1 tbody tr:nth-child(2n+1){
+            background-color: cadetblue;
+        }
+        .table-1 tbody tr:hover{
+            background-color: aqua;
+        }
+        /* --------------- */
+        .table-2{
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        .table-2 td{
+            border: 1px solid darkblue;
+            padding: 5px;
+            text-align: center;
+        }
+        .table-2{
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        /* -------------------- */
+        .tbl{width: 80%;}
+        .tbl-large{width: 100%;}
+        .tbl-medium{width: 60%; margin: auto;}
+        .tbl-small{width: 200px;}
+        /* создать для удобства сетку с размерами и общими параметрами таб. */
+        /* ------------------------ */
+        .table-3{
+            /* background-color:darkkhaki; */
+            border-spacing: 3px;
+            width: 100%;
+        }
+        .table-3 th{
+            background-color:deepskyblue;
+            color: #fff;
+        }
+        .table-3 th,.table-3 td{
+            padding: 5px;
+        }
+        .table-3 td{
+            background-color:darkkhaki ;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Hellou Tables</h1>
+    <table class="table-1">
+        <caption>Caption</caption>
+        <thead>
+            <tr>
+                <th>Lorem, ipsum.</th>
+                <th>Corrupti, adipisci.</th>
+                <th>Beatae, rem?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem.</td>
+                <td>Doloribus?</td>
+                <td>Itaque.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Doloribus?</td>
+                <td>Itaque.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Doloribus?</td>
+                <td>Itaque.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Doloribus?</td>
+                <td>Itaque.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Doloribus?</td>
+                <td>Itaque.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Doloribus?</td>
+                <td>Itaque.</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Lorem.</th>
+                <th>Minus.</th>
+                <th>Exercitationem?</th>
+            </tr>
+        </tfoot>
+    </table>
+    <table class="table-2">
+        <tr>
+            <td rowspan="2">Lorem.</td>
+            <td colspan="2">Aliquam.</td>
+            
+        </tr>
+        <tr>
+            
+            <td>Neque!</td>
+            <td>Sint.</td>
+        </tr>
+        <tr>
+            <td>Lorem.</td>
+            <td>Soluta?</td>
+            <td>Earum!</td>
+        </tr>
+        <tr>
+            <td colspan="2">Lorem.</td>
+            <td>In!</td>
+            
+        </tr>
+        <tr>
+            <td>Lorem.</td>
+            <td>Qui?</td>
+            <td>Eveniet?</td>
+        </tr>
+    </table>
+    <table class="table-3">
+        <thead>
+            <tr>
+                <th>Lorem.</th>
+                <th>Hic?</th>
+                <th>Earum.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lorem.</td>
+                <td>Consectetur?</td>
+                <td>Quod?</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Possimus.</td>
+                <td>Consectetur.</td>
+            </tr>
+            <tr>
+                <td>Lorem.</td>
+                <td>Esse!</td>
+                <td>Esse.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <caption>Caption</caption> - название таблицы
+    <thead>***</thead> - шапка таблицы
+    <tbody>***</tbody> - тело таблицы
+    <th>***</th> - строка таблицы в шапке
+    <tr>***<tr> -строка таблицы
+    <td>***</td> - колонка таблицы
+    <tfoot>***</tfoot> - подвал таблицы
+
+    rowspan="2" - слитие строк по вертикали
+    colspan="2" - слитие колонок по горизонтали
+    border-collapse: collapse; - схлопывание границ
+    border-spac:- выравнивание по горизонтали
+    vertical-aling:- выравнивание по вертикали -->
+    <a class="btn btn-extra" href="../index.html">Home</a>
+</body>
+</html>

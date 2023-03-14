@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <script src="https://kit.fontawesome.com/34b6d3e7be.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/may.css">
+    <style>
+        textarea{
+            height: 100px;
+           
+        }
+        textarea[readonly] {
+            background-color: #5d5656;
+            opacity: 0.8;
+
+        }
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+        }
+        .wrapper{
+            margin-top: 40px;
+        }
+        /* ------------------- */
+        input[type="number"]{
+            border: 1px solid red;
+            border-radius: 5px;
+            width: 3rem;
+            padding: 5px;
+
+        }
+        /* --------------------   ^  НАЧИНАЕТСЯ С  ... */
+       a[href^="http"]{
+        font-weight: bold;
+       }
+       /* ----------------------   *  СОДЕРЖИТ ....  */
+       a[href*="github"]{
+        color: rgb(94, 221, 94);
+       }
+       /* ----------------------   $  ЗАКАНЧИВАЕТСЯ НА ... */
+       a[href$=".com"]{
+        text-decoration: none;
+       }
+       /* --------- КОМБИНАЦИ АТРИБУТОВ----- */
+       input[type="password"][required]{
+        border: 3px solid rgb(150, 3, 145);
+        box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.5);
+       }
+        /* ---------Комбинации Селекторов------ */
+        /* h1, h2, .btn, #val{*** стиль***}  */
+
+        
+        /* ------селектор потомка----- */
+        /* .footer a{*** стиль***} */
+
+        
+        /* --------селектор дочернего эл ----- */
+        /* .header > h1 {*** стиль***} */
+
+        
+        /* ---------- смежные селекторы-----*/
+        /* h1 + ul {*** стиль***} */
+            
+        
+        .hidden{
+           display: none; 
+           /* скрываем класс ".hidden" через- "display: none;" место не резервируется */
+        }
+        .more:hover + .hidden {
+            display: block;
+            /* Применяем стили к классу "hidden" при наведении ":hover" на смежный "+" класс "more" */
+        }
+        /* ------ братские селекторы----- */
+        .star {
+            color: grey;
+            font-size: 36px;
+            text-decoration: none;
+        }
+        .wrapper-1{
+            text-align: left;
+            
+        }
+        a:hover,
+        .wrapper-1 a:hover ~a{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hellou</h1>
+    <textarea>Lorem, ipsum dolor.</textarea> 
+    <textarea readonly>Lorem, ipsum dolor.</textarea>
+    <input type="checkbox">
+<section>
+    <!-- extarea- тег для масштабируемого поля ввода текста
+         readonly- запрет ввода -->
+    
+   <!-- 
+   1) Селектор элемента div/p/h/span/
+   2) Селектор класса class .
+   3) електор айди id/ #
+   4) Селекторы по атрибуту 
+     textarea[readonly]{*****}
+    input[type="checkbox"]{****} 
+    p[class^"btn"]{} обращение к атрибуту который /НАЧИНАЕТСЯ С/ ^    "btn"
+    a[href*="github"]{} обращение к атрибуту который /СОДЕРЖИТ/ *     "github"
+    a[href$=".com"] обращение к атрибуту который /ЗАКАНЧИВАЕТСЯ НА/ $ ".com"
+    Очень удобно стилизовать целые группы классов если их правильно назвать
+    /* --------- КОМБИНАЦИ АТРИБУТОВ----- */
+       input[type="password"][required]{****}-->
+       <!-- ---------Комбинации Селекторов----- -->
+       <!-- групирование - перечесление селекторов через запятую/ 
+        h1, h2, .btn, #val{стили***}/
+        
+       1- Предок 
+       2- Потомок- .header>h1-  к всем потомкам с тегом h1 
+       3- Родитель- не пишется взаимодейтвие с низу вверх.
+       4- Дочерний эл. - прим стил. только к влож.эл. в родителя сразу -.header > h1
+       5- Братья (сиблинги) элементы на одном уровне.                   a:hover ~ a
+       6- Смежные элементы - которые находятся рядом                       - h1 + ul 
+         <div class="wrapper" dir="rtl"> Атрибут dir= с значением "rtl" - меняет порядок элементов в нем -->
+
+</section>       
+    <div class="wrapper">
+        <form>
+          <p>User name: <input type="text"></p>
+          <p>User age: <input type="number"></p>
+          <p><input type="password" required></p>
+          <p><input type="submit"value="send"></p>
+          
+          <!-- <button>SEND</button> -->
+        </form>
+    </div>
+    <div class="wrapper">
+        <p>
+            <a href="http://google.com">GOOGLE</a>
+            <a href="http://ilstep.org.ua">IT Step</a>
+            <a href="file://dir/map.jpg">Imge</a>
+            <a href="github.com">Github</a>
+        </p>
+    </div>
+    <div class="wrapper">
+        <div class="header">
+            <h1>Lorem, ipsum dolor.</h1>
+            <ul>
+                <li><a href="#"></a>Lorem.</li>
+                <li><a href="#"></a>Lorem.</li>
+                <li><a href="#"></a>Lorem.</li>
+            </ul>
+        </div>
+        <div class="main">
+            <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum mollitia veritatis ab, est nesciunt nihil, minima vitae ea quod dolor voluptate at rerum tempora ratione cum quos ducimus eaque non!</p>
+            <p class="more">2 Lorem ipsum dolor sit amet.</p>
+            <p class="hidden">3 Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="footer">
+            <ul>
+                <li><a href="#"></a>Lorem.</li>
+                <li><a href="#"></a>Lorem.</li>
+                <li><a href="#"></a>Lorem.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper-1" dir="rtl">
+        <a href="#" class="star">&#9733</a>
+        <a href="#" class="star">&#9733</a>
+        <a href="#" class="star">&#9733</a>
+        <a href="#" class="star">&#9733</a>
+        <a href="#" class="star">&#9733</a>
+    </div>
+
+    <a class="btn btn-extra" href="../index.html">Home</a>
+    &#9734
+    <i class="fa-solid fa-star"></i>
+
+</body>
+</html>

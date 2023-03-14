@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>relative</title>
+    <style>
+          .relative-h{
+            margin-bottom: 40px;
+            font-size: 2rem;
+            background-color: lightblue;
+            padding: 0 1rem;
+            overflow: hidden;
+          }
+          .relative-h span{
+            position: relative;
+            top: 0.5rem;
+          }
+          .thumb-photo{
+            width: 10rem;
+            height: 15rem;
+            border: 2px solid red;
+            position: relative;
+            transition: 1s;
+
+          }
+          .thumb-photo:hover{
+            cursor: pointer;
+            z-index:100;
+            transform: scale(1.2);
+          }
+
+          img {
+            width: 100%;
+          }
+    </style>
+</head>
+<body>
+    <h2 class="relative-h">Lorem <span>ipsum</span> dolor.</h2>
+    
+    <a href="http://google.com"><img class="thumb-photo" src="../img/Дев1.jpg" alt="Поиск"></a>
+    <img class="thumb-photo" src="../img/Дев2.jpg" alt="">
+    <img class="thumb-photo" src="../img/Дев3.jpg" alt="">
+
+    <!-- relative- может позиционироваться относительно своего места положения
+              атрибутами -ltft/right/top/bottom/
+              место с которго єлемент смещон остаётся пустым.
+              если сместит элемент в право за границу Браузера то появится полоса прокрутки
+              если сдвинуть с верху вниз - тоже полоса прокрутки
+              если сдвинуть в лево или вверх - то полоса прокрутки не появляется
+              работает z-index
+              не применяется к ячейкам таблицы -->
+</body>
+</html>

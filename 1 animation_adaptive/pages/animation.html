@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/may.css">
+    <style>
+        /* описіваем ключевые кадры через дериктиву (@keyframes) и имя (jumping) */
+        @keyframes jumping { 
+            0%{
+                bottom: 0px;
+                 box-shadow: 0px 0px 5px rgba(1, 0, 0, 0.5); 
+            }/*тень/черный полупроз.цв.  */
+        
+            100%{
+                bottom: 30px;
+                box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.1);
+            }
+            
+        }
+        /* - /name/ имя анимации.                                                  - jumping
+                             - /duration/ продолжительность                        - 0.5s
+ cubic-bezier(0.1,0.25,0.1,1)- /timing-function/ временная функция.        -cubic-bezier-   
+                             - /delay/ - время ожидания перед началом перехода-       0s-  "0сек" 
+                             - /iteration-count/- количество повторений-        infinite-  "бесконечно"
+                             - /direction/ - направление                     - alternate-  "в перед назад" 
+                             - /fill-mode/ - режим заполнения каким оставить элем - both-  "в обоих направлениях" */
+       
+        .btn-jump{
+                animation: jumping 0.7s cubic-bezier(0.1,0.25,0.1,1) 0s infinite alternate both;
+                
+                /* функция в течении 0,5сек. функц.фремени кубик без е (0.1,0.25,0.1,1) начать с 0 сек. Безконечно Вернуться Вобоих направлениях */
+                background: lightslategray;
+                border-radius: 50%;
+                display: inline-block;
+                color: white;
+                cursor: pointer;
+                font-size: 0.75rem;
+                font-weight: 300;
+                letter-spacing: 0.2em;
+                padding: 2em ;
+                position: relative;
+                text-decoration: none;
+                text-transform: uppercase;
+                vertical-align: middle;
+                text-align: center;
+                margin-top: 50px;
+                width: 100px;
+                height: 100px;
+                /* line-height: 50px; */
+            }
+            /* ------------------------------ */
+            @keyframes square {
+            0%{
+                left: 0;
+                top: 0;
+            }
+            25%{
+                left: 300px;
+                top: 0;
+            }
+            50%{
+                left: 300px;
+                top: 300px;
+            }
+            75% {
+                left: 0;
+                top: 300px;
+            }
+            100%{
+                left: 0;
+                top: 0;
+            }
+        }
+        
+        .runner{
+           background: tomato;
+           color: antiquewhite;
+           height: 70px;
+           width: 70px;
+           position: absolute;
+           text-align: center;
+           line-height: 70px;  /*высота строки*/
+           animation: square 4s linear 0s infinite;
+           animation-direction:alternate-reverse;
+           /* 
+           alternate-reverse- оратном направлении +впер.наз
+           normal - обычное направление
+           everse -обратно
+           alternate- в перед назад  */
+          
+              
+            }
+            
+    </style>
+</head>
+<body>
+    
+    <div style="margin-bottom:30px ;">
+        <a class="btn-jump" href="#">Jumping bottom</a>
+    </div>
+    <div style="margin-bottom:30px; position: relative;">
+        <div class="runner">HELLOU</div>
+    </div>
+    <a class="btn btn-extra" href="../index.html">Home</a>
+</body>
+</html>

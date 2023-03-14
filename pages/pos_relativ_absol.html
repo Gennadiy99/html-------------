@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relativ+Absolut</title>
+    <style>
+       .box-1{
+        position: relative;
+        min-height: 400px; /*минимальная высота элемента */
+        margin-bottom: 50px;
+        background-color: lightblue;
+        border: 20px solid red;
+        padding: 40px;
+       }
+       .box-2{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        left: 20px;
+        background-color: #717272;
+
+       }
+       img{
+        width: 300px;
+       }
+       .wrapper{
+        position: relative;
+        border: 1px solid red;
+        width: 300px; 
+    }
+       .pub {
+        position: absolute;
+       }
+       .pub{
+        left: 10px;
+        top: 10px;
+        text-align: center;
+        padding: 50px 10px;
+        min-width: 40px;
+        border: 2px solid #fff;
+        background-color:#3eceef;
+        color: #fff;
+
+
+       }
+
+
+    </style>
+</head>
+<body>
+    <h1>Hellou Relativ+Absolut</h1>
+    
+    <div class="box-1">
+        <div class="box-2"></div>
+    </div>
+    <div class="wrapper">
+        <img src="../img/Дев2.jpg" alt="">
+        <div class="pub">
+            <div class="date">19</div>
+            <div class="month">March</div>
+        </div>
+    </div>
+    <!-- При включении позиционирования (через top/right) падинги перестают действовать
+         Если позиция relative то блок работает на всю ширину и его можно ограничить прописав with
+         Если позиция absolut то блок становится по ширине контента  -->
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media_queries</title>
+    <style>
+       
+        /* @media (min-width:1200px){
+            body{
+                font-size: 36px;
+            }
+        } */
+        /* @media (min-width:500px) and (orientation:landscape){
+           body{
+            font-size: 36px;
+           }
+        } */
+        /* стиль будет применяться если ширина вьюпотра больше 1200px */
+        /* --------------------- */
+        /* body{
+            font-size: 14px;
+        }
+        .btn{
+            display: block;
+        }   
+        .title{
+            text-align: center;
+        }
+        @media (orientation:landscape){
+            body{
+            font-size: 36px;
+        }
+        .container{
+            margin: 0 auto;
+            width: 500px;
+        }
+        .btn{
+            display: inline-block;
+        }   
+        .title{
+            text-align: left;
+        }
+        }
+        @media (min-resolution: 332dpi){
+
+        } */
+        /* -------мобильные с начала---- */
+        body{
+
+        }
+        @media (min-width:768px ){
+          /* для планшетов */
+        }
+        @media (min-width:992px){
+            /* Для ноутбуков и ПК */
+        }
+        @media (min-width:1200px) {
+           /* Для больших экранов  */
+        }
+        /* ----- Сначала ПК----- */
+        body{
+
+        }
+        @media (max-width:1199px) {
+        /*--- Для ноутбуков и ПК---*/
+        }
+        @media (max-width:991px) {
+         /* ---для планшетов--- */   
+        }
+        @media (max-width:767px) {
+         /*--- для сматрфонов ---*/
+        }
+
+
+       
+    </style>
+    
+</head>
+<body>
+    <h1>Hellou Media_queries</h1>
+
+    <!-- <p>Lorem ipsum dolor sit amet.</p>  -->
+
+    <div class="container">
+        <button class="btn">Lorem.</button>
+        <p class="title">Lorem ipsum dolor sit amet.</p>
+    </div>
+
+
+    <!-- @media (min-width:1200px){
+     body{font-size: 36px; } - стиль будет применяться если ширина вьюпотра больше 1200px.
+    @media (min-width:500px) and (orientation:landscape){
+           body{font-size: 36px;} - стиль будет применяться после ширины экрана 500px 
+           в Горизонтальной ориентации "orientation:landscape".
+    @media (min-resolution: 332dpi){***стиль***} - 332dpi разрешение на устройстве после которого прим.стиль
+
+                
+           
+        
+    
+    -->
+            
+       
+    
+    
+</body>
+</html>

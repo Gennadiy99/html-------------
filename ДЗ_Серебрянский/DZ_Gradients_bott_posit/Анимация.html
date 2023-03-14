@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация ДЗ</title>
+    <style>
+        .wrapper{
+            position: relative;
+            margin-top: 50px;
+        }
+        
+        @keyframes jumping {
+            0%{
+                bottom: 0px;
+                box-shadow: 0px 2px 5px rgba(1, 0, 0, 0.5);
+            }
+            100%{
+                bottom: 25px;
+                box-shadow: 0px 30px 30px rgba(1, 0, 0, 0.5);
+            }
+            
+        }
+        @keyframes goto-2 {
+            0%{
+                left: 225px;
+                top: 0px;
+            }
+            50%{
+                left: 225px;
+                top: 200px;
+                transform: rotate(90deg);
+            }
+            100%{
+                top: 200px;
+                left:0px;
+
+            }
+        }
+        @keyframes goto-3 {
+            0%{
+                left: 120px;
+                top: 0px;
+            }
+            50%{
+                left: 120px;
+                top: 200px;
+                transform: rotate(180deg);
+            }
+            100%{
+                top: 200px;
+                left: 345px;
+                transform: rotate(360deg);
+            }
+        }
+        .button,.button-1{
+            display: inline-block;
+            
+            position: relative;
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: aliceblue;
+            background: #3646ee;
+            text-align: center;
+            padding-top: 14px;
+            margin-right: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .button-1{
+            display: inline-block;
+            position: absolute;
+            top:-20px;
+            left:350px;
+            background: #028f8a;
+        }
+
+        .button-2,.button-3{
+            display: inline-block;
+            /* position: relative; */
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: aliceblue;
+            background: #ff01d9;
+            text-align: center;
+            padding-top: 14px;
+            margin-right: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+            position: absolute;
+            top:0px;
+            left: 0px;
+        }
+        .button-3{
+            background: #fa4205;
+            left: 120px;
+            top: 0px;
+        }
+        .anime{
+            animation: jumping 0.5s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate;
+        }
+        .anime_goto-2{
+            /* animation: goto 6s liner 0s infinite alternate; */
+            animation: goto-2 4s linear 0s infinite;
+            animation-direction:alternate-reverse;
+        }
+        .anime_goto-3{
+            /* animation: goto 6s liner 0s infinite alternate; */
+            animation: goto-3 4s linear 0s infinite;
+            animation-direction:alternate-reverse;
+        }
+        .button-1:hover,.button:hover,.button-2:hover,.button-3:hover{
+            background-image:linear-gradient(360deg, violet 10%,rgb(9, 221, 240),rgb(161, 5, 161)90% );
+            /* transform: scale(1.1);
+            transition: 0.5s; */
+        }
+        .wrapper-1{
+            width: 50%;
+        }
+        section{
+            width: 70%;
+            text-align: center;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="wrapper">
+            <div class="button anime">Click me</div>
+            <div class="button-2 anime_goto-2">button-2</div>
+            <div class="button-1 anime">Click me 2</div>
+            <a href="Градиент.html">
+                <div class="button-3 anime_goto-3">button-3</div>
+            </a>
+        
+        </div>
+        <divs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, ab. Atque nam, ex nobis vel ipsa illo expedita at deleniti dignissimos suscipit, id magnam tempore earum, omnis quia aperiam distinctio consequatur adipisci doloribus voluptate? Odio eum error earum accusantium modi. Dolores temporibus aliquam reprehenderit rem ea aperiam explicabo nobis dolor adipisci autem pariatur sapiente id quia hic aspernatur assumenda harum nemo, similique earum culpa? Nulla eaque vitae facilis neque ea aliquam incidunt, consequuntur explicabo nemo ex, soluta ipsam ab, culpa asperiores iste cupiditate. Suscipit optio, reiciendis maiores commodi nisi quasi omnis in, aut voluptatem recusandae nam molestias fuga, aliquid obcaecati dolores. Ipsa quos veniam libero ducimus, ab nostrum voluptas minus saepe perferendis a veritatis quia numquam commodi voluptate tempore hic enim consectetur? Aut aliquam omnis cumque rerum quibusdam necessitatibus ipsa aperiam excepturi architecto, praesentium, incidunt soluta quae sunt veniam illo, quidem officia dolorum pariatur repellat commodi temporibus animi? Molestias, placeat?
+        
+        </div>
+        
+    </section>
+        
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <link rel="stylesheet" href="../style/may.css">
+    <style>
+        a{
+         background-color: grey;
+         margin-right: 20px;
+         padding: 5px 10px;
+         text-decoration: none;
+         /* transition: 3s; */
+         
+        }
+        a:hover{
+            background-color: yellow;
+            color: tomato;
+            border: 1px solid blue;
+            
+        }
+        .with-fast-ittransition{
+            transition: 300ms;
+
+        }
+        .with-slow-ittransition{
+            transition: 1s;
+
+        }
+        .with-bg-trans{
+            /* transition-duration: 3s;
+            transition-property: background; */
+            transition: 3s background;
+        }
+                /*----------------------- */
+        .wrapper:hover div{
+            left: 500px;
+            /* background-color: tomato; */
+            height: 50px;
+            width: 50px;
+            background-image: linear-gradient( red,gray, blue);
+            
+
+        }
+        .box{
+            position: relative;
+            left: 0;
+            height: 30px;
+            width: 30px;
+            background-color: cadetblue;
+            margin-bottom: 30px;
+            transition: 1s;
+            /* transition-delay: 1s; */
+
+
+        }
+        .ease{
+            transition-timing-function: ease;
+        }
+        .lenear{
+            transition-timing-function: linear;
+
+        }
+        .ease-in{
+            transition-timing-function:ease-in ;
+
+        }
+        .ease-out{
+            transition-timing-function:ease-out;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div style="margin-bottom: 30px;">
+        <a href="">Lorem.</a>
+        <a class="with-fast-ittransition" href="">Lorem.</a>
+        <a class="with-slow-ittransition" href="">Lorem.</a>
+        <a class="with-bg-trans" href="">Lorem.</a>
+    </div>
+
+    <!-- Tansitionsr- Плавный переход от одного состояния к другому в течении какогото времени
+    transition - сокращенный элемент в который можно собирать несколько свойств!
+    transition-property — указывает, для какого стиля будет действовать переход
+    transition-duration — определяет длительность анимации
+    transition-timing-function — скорость хода анимации;-->
+
+     <div class="wrapper">
+        <p>ease</p>
+        <div class="box ease"></div>
+        <P>lenear</P>
+        <div class="box lenear"></div>
+        <p>ease-in</p>
+        <div class="box ease-in"></div>
+        <p>ease-out</p>
+        <div class="box ease-out"></div>
+        
+     </div>
+     <a class="btn btn-extra" href="../index.html">Home</a>
+</body>
+</html>

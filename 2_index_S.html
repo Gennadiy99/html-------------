@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок2 Еденицы изм.mar.pad.bor.span</title>
+    <style>
+        html{
+            font-size:36px ;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+             font-size: 20px;
+            }
+            .font-exp{
+                font-size: 2rem;
+            }
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- 1.absolute (обсалютные)
+       12 px.
+       12 cm
+       12 mm
+       12 in дюймы
+       1 поинт 1/72 inch - для тиографии
+       1 pc писи (1/6 inch) - для тиографии
+    2.==relative (относительные)
+       120 %
+       1.2em - относительно родительского элемента 
+       1.2rem - относительно html 
+       1vw -         1% от ширины
+       1vh - вьюпорт 1% от высоты 
+       vmin - вью порт мин.
+       vmax - вью порт максимум -->
+    
+       <p style="font-size: 20px;"> Lorem ipsum dolor sit amet.</p>
+    <p class="font-exp">Lorem ipsum dolor sit amet.</p>
+    <p class="fix-size">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga commodi ex laboriosam! Debitis iste nesciunt doloremque quibusdam ipsam velit sint ut reiciendis qui assumenda. Tempore labore ipsam ex harum praesentium molestias eaque aut sit illum repellat, nesciunt enim, debitis aperiam. Autem repellat quae ullam distinctio. Nulla beatae reprehenderit quasi iusto nemo odio harum neque aliquid voluptas? Sint in corrupti fugiat optio neque maxime? Iure quas doloribus cum tenetur obcaecati magni voluptas. Voluptates, dolore optio iusto sunt cupiditate eos. Veritatis sit culpa omnis, aliquam laboriosam delectus voluptatum quae ea esse pariatur a nisi libero deserunt inventore nobis suscipit atque vero placeat. </p>
+    <p class="margin-exp">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga commodi ex laboriosam! Debitis iste nesciunt doloremque quibusdam ipsam velit sint ut reiciendis qui assumenda. Tempore labore ipsam ex harum praesentium molestias eaque aut sit illum repellat, nesciunt enim, debitis aperiam. Autem repellat quae ullam distinctio. Nulla beatae reprehenderit quasi iusto nemo odio harum neque aliquid voluptas? Sint in corrupti fugiat optio neque maxime? Iure quas doloribus cum tenetur obcaecati magni voluptas. Voluptates, dolore optio iusto sunt cupiditate eos. Veritatis sit culpa omnis, aliquam laboriosam delectus voluptatum quae ea esse pariatur a nisi libero deserunt inventore nobis suscipit atque vero placeat. </p>
+    <p class="inline-exp">Lorem ipsum <span>dolor</span> sit amet.</p>
+    <p><span class="span-exp">Lorem, ipsum dolor.</span><span class="span-exp">Sequi, veritatis quasi!</span><span class="span-exp">Placeat, facilis laboriosam?</span></p>
+    <p>
+        <span class="span-exp">Lorem, ipsum dolor.</span>
+        <span class="span-exp">Sequi, veritatis quasi!</span>
+        <span class="span-exp">Placeat, facilis laboriosam?</span>
+    </p>
+
+    <div>
+        <img src="img/1.png" alt="">  <span class="men-btn"><a href="">Home</a></span>
+        <img src="img/2.png" alt=""><span class="men-btn"><a href="">AboutUs</a></span>
+        <img src="img/3.png" alt=""><span class="men-btn"><a href="">Setting</a></span>
+        <img src="img/4.png" alt=""><span class="men-btn"><a href="">Exit</a></span>
+    </div>
+    
+   <ul class="menu">
+    <li><a href="page1.html">page1</a></li>
+    <li><a href="page2.html">page2</a></li>
+    <li><a href="page2.html">page3</a></li>
+    <li><a href="page3.html">page4</a></li>
+   </ul>
+   <div class="prob">
+    <div class="prob_1"><img src="img/1.png" alt=""><a href="page1.html">page1</a></div>
+    <div class="prob_1"><img src="img/1.png" alt=""><a href="page2.html">page2</a></div>
+    <div class="prob_1"><img src="img/1.png" alt=""><a href="page2.html">page3</a></div>
+    <div class="prob_1"><img src="img/1.png" alt=""><a href="page3.html">page4</a></div>
+   </div>
+</body>
+</html>

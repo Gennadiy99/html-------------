@@ -1,0 +1,106 @@
+body{
+    font-size: 20px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col_contaсt{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background: #004078;
+    width: 30%;
+    /* padding: 10px 20px;  */
+    color:#ffffff;  
+}
+.foto{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+img{
+    border-radius: 10px;
+    border: #004078 1px solid;
+    width: 100%;
+    margin-top: 20%;
+}
+.contacts{
+    padding: 0 40px;
+    
+}
+
+.contacts_1{
+    display: flex;
+    justify-content: space-around;
+}
+.contacts_2{
+    display: flex;
+    align-items: baseline;
+
+}
+.contacts_3{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color:#004078 ;
+}
+.contacts_4{
+    width: 110%;
+}
+
+
+.border{
+    margin: 0 2%;
+    width: 70%;
+    border-top: 1px solid darkblue;
+    
+}
+
+.list{
+    width: auto;
+    background: #00315e;
+}
+.col_contaсt h3{
+    padding: 2px 40px;
+    font-size: 26px;
+    background: #00315e;
+}
+
+.col_inform{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background: #e2e4e6;
+    padding: 10px 20px;
+}
+.col_inform P{
+    width: 400px;
+    padding-left: 15px;
+    margin-right: 5%;
+}
+ul li{
+    font-size: 20px; 
+	line-height: 40px;
+    /* font-size - line-height междустрочный интервал 40-20=20px */
+}
+.one{
+    width: 21%;
+}
+.two{
+    width: 79%;
+    vertical-align: top;
+}
+.two h3{
+    margin: 0;
+    padding-left: 15px;
+}
+.two li{
+    list-style-type: none;
+}
+
+/* .container p{
+    margin: 0;
+} */

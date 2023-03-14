@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo_classes</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../style/main.css">
+    <style>
+        a:hover{
+            background-color: blue;
+        }
+        a:visited{ 
+            background-color: chartreuse; 
+        }
+        input{
+            margin-bottom: 30px;
+        }
+        input:focus{
+            border: 2px solid red;
+            padding: 5px;
+        }
+        /* li:first-child{
+            background: #f39f9f;
+        }
+        li:last-child{
+            background-color: lightblue;
+        } */
+        li:nth-child(3n+2)
+        {
+            background-color: aqua;
+        }
+        /* 3- третий/  2n-кажд. 2-й/ odd- нечетны/  even- Четные/ 3n+1- каждый 1-й из трех./ */
+        
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <a  class="btn" href="http://google.com">google</a>
+        <input type="text" placeholder="input text">
+        <ul>
+            <li>Lorem.</li>
+            <li>Culpa?</li>
+            <li>Perspiciatis?</li>
+            <li>Ullam.</li>
+            <li>Lorem.</li>
+            <li>Culpa?</li>
+            <li>Perspiciatis?</li>
+            <li>Ullam.</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

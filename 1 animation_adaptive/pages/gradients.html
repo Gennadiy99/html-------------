@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gredients</title>
+    <link rel="stylesheet" href="../style/may.css">
+    <style>
+        div{
+            margin-bottom: 20px;
+            height: 100px;
+           
+        }
+        .simple-gradient {
+           background-image: linear-gradient(red,gray);
+        }
+        .simple-gradient-2{
+            background-image: linear-gradient(to bottom right, red,gray);
+            /* направление градиента в нижний правый угол. */
+        }
+        .simple-gradient-3{
+            background-image: linear-gradient(30deg, red,gray);
+            /* можно развернуть градиент в градусах относ.гориз.плоскости */
+        }
+        .multi-gradient{
+            background-image: linear-gradient( red,gray, blue);
+            /* можновставить три цвета в горизонт.градиент */
+        }
+        .multi-gradient-2{
+            background-image: linear-gradient(90deg, red 5%, gray 35%, blue 95%);
+            /*Разворачиваем Град.на 90град, указываем возле цвета сколько он занимает места в % 
+            процент указывается с какого места начинается чистый цвет, остальное градиент */
+        }
+        .radial-gradient{
+            background-image:radial-gradient(lightblue, green);
+            /* радиальный градиент работает от центра наружу, внутри первый цвет */
+        }
+        .radial-gradient-2{
+            background-image:radial-gradient(at top right, lightblue, green);
+            /*at-от верхнего правого угла распростр градиент по диагонали к левому нижнему.*/
+        }
+        .radial-gradient-3{
+            transition: all 2s;
+            background-image:radial-gradient(closest-corner at 30px 30px , lightblue, green);
+            /* closest-corner- от левого верхнего угола/ 30px 30px-рзмер площади цвета*/
+        }
+        .radial-gradient-3:hover{
+            background-image:radial-gradient(farthest-side at 30px 30px , lightblue, green);
+            /* farthest-side- дальний верхний угол*/
+        }
+        .radial-gradient-4{
+            background-image:radial-gradient( 40px 20px at 80% 50% , lightblue, green);
+            /* размер (40px 20px) позицианирование (at 80% 50%) по оси Х-80% по оси У-50% */
+        }
+</style>
+</head>
+<body>
+    <h1>Hellou</h1>
+    градиенты Линейный и Радиальный
+    <div class="simple-gradient"></div>
+    <div class="simple-gradient-2"></div>
+    <div class="simple-gradient-3"></div>
+    <div class="multi-gradient"></div>
+    <div class="multi-gradient-2"></div>
+    Радиальное
+    <div class="radial-gradient"></div>
+    <div class="radial-gradient-2"></div>
+    <div class="radial-gradient-3"></div>
+    <div class="radial-gradient-4"></div>
+
+
+
+
+    <a class="btn btn-extra" href="../index.html">Home</a>
+</body>
+</html>

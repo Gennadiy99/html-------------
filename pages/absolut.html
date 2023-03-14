@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolut</title>
+    <style>
+      h2{
+        position: absolute;
+        left: 100px;
+        right: 120px;
+        background-color: aqua;
+      }
+      .overlay{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.8);
+      } 
+      .dialog{
+        position: absolute;
+        top: 50%;  /* в низ на 50px */
+        left: 50%; /* в право на 50px */
+        transform: translate(-50%, -50%); /* перемещаеn элемент на (50% по оси Х и на 50% по оси Y) */
+
+
+        width: 200px;
+        height: 150px;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: antiquewhite;
+
+      }
+
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, saepe!</p>
+    <div class="overlay"></div>
+    <div class="dialog">
+        Messeg
+    </div>
+
+    <!-- <h2>Hellou Absolut</h2> -->
+    <!-- При абсолютном позиционировании элемент вырывается из потока и привязывается к вьюпорту, краям окна просмотра
+    координаты указываются относ.края браузера
+    ширина эл. если не заданны то определяются содержимым 
+    абсолют работает только при указании top/bottom/left/right
+    Если задать left: 100px; и right: 120px; то установимширину элемента: (Шир.вьюпорта минус left: 100px;и right: 120px)
+    Если поставим left: 100px; with:400px; то right будет игнорироваться 
+    Свойства left и top имеют больший приоритет чем right bottom
+    Элемент перемещается при прокрутке
+    z-index работает
+    перекрывает все другие элементы -->
+    
+
+    Урок 3 2:19 модальное окно
+</body>
+</html>

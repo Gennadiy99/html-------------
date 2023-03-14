@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfomation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/may.css">
+    <style>
+        @keyframes square {
+            0%{
+                transform: translate(0, 0);
+            }
+            25%{
+                transform: translate(300px, 0);
+            }
+            50%{
+                transform: translate(300px, 300px);
+            }
+            75% {
+                transform: translate(0, 300px);
+            }
+            100%{
+                transform:translate(0, 0);
+            }
+        }
+        .runner{
+            background: tomato;
+            color: antiquewhite;
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            text-align: center;
+            line-height: 70px;  
+            animation: square 6s linear 0s infinite;
+            animation-direction:alternate;
+        }
+        @keyframes round {
+            0% {
+                transform: rotate(0deg);
+                
+            }
+            100%{
+                transform: rotate(360deg);
+                
+                
+            }
+        } 
+        .circle{
+            background-color: rgb(41, 189, 238);
+            height: 150px;
+            width: 150px;
+            border-radius: 75px;
+            /* border-radius: 50%; */
+            text-align: center;
+            line-height: 150px;
+            animation: round 3s linear 0s infinite;
+            /* position: absolute; */
+        }
+        @keyframes triangle {
+            0%{
+                transform: translate(0, 0) scale(1.5);
+            }
+            
+            100%{
+                transform: translate(300px, 0) scale(0.5) rotate(360deg) ;
+               
+            }
+            
+        }
+        .triangle{
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid red;
+            animation: triangle 4s linear 0s infinite alternate;
+            text-align:left;
+            vertical-align: bottom;
+            line-height:120px ;
+            position: relative;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>HELLOU Transfomation</h1>
+    
+    <div style="margin-bottom:30px; position: relative;">
+        <div class="runner">translate</div>
+    </div>
+    
+    <div style="margin-bottom:30px;">
+        <div class="circle">rotate</div>
+    </div>
+    
+    <div style="margin-bottom:30px;">
+        <div class="triangle">scale</div>
+    </div>
+
+
+
+    <!-- Свойство transform задаёт вид преобразования элемента. Свойство описывается с помощью функций трансформации, 
+    которые смещают элемент относительно его текущего положения на странице или изменяют его первоначальные размеры и форму.
+
+    transform: translate(x,y)- Сдвигает элемент на новое место, перемещая относительно обычного положения вправо и вниз,
+                            используя координаты X и Y, не затрагивая при этом соседние элементы. Если нужно сдвинуть 
+                            элемент влево или вверх,то нужно использовать отрицательные значения.
+               scale(x,y)- Масштабирует элементы, делая их больше или меньше. Значения от 0 до 1 уменьшают элемент.
+                         Первое значение масштабирует элемент по ширине, второе — по высоте. Отрицательные значения 
+                         отображают элемент зеркально. 
+            rotate(угол)- Поворачивает элементы на заданное количество градусов, отрицательные значения от -1deg до -360deg
+                          поворачивают элемент против часовой стрелки, положительные — по часовой стрелке. Значение rotate(720deg)
+                          поворачивает элемент на два полных оборота.      
+    skew(x-угол,y-угол) - Используется для деформирования (искажения) сторон элемента относительно координатных осей.
+                          Если указано одно значение, второе будет определено браузером автоматически. 
+                initial - Устанавливает значение свойства в значение по умолчанию.                 -->
+                <a class="btn btn-extra" href="../index.html">Home</a>
+</body>
+</html>

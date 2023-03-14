@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Градиенты ДЗ</title>
+    <link rel="stylesheet" href="mei.style.css">
+    <style>
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .wrapper span{
+            padding-left: 140px;
+        }
+        
+        .bottom{
+            font-size: 1.2rem;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            width: 110px;
+            height: 40px;
+            padding: 10px 30px;
+            margin: 20px;
+            border: 1px solid rgb(112, 5, 212);
+            color: #ffff;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .simple_gradient{
+            background-image: linear-gradient(blue, rgb(8, 246, 222) );
+            transition: 1s;
+        }
+        .simple_gradient-2{
+            background-image: linear-gradient(to bottom left,rgb(255, 0, 4), rgb(246, 242, 8) );
+        }
+        .simple_gradient-3{ 
+            background-image: linear-gradient(45deg, rgb(9, 59, 9), rgb(104, 251, 82));
+        }
+        .simple_gradient-4{ 
+            background-image: linear-gradient(to top right, rgb(42, 9, 59), rgb(208, 127, 249));
+        }
+        .multi-gradient{
+            background-image: linear-gradient(rgb(255, 255, 0), rgb(137, 137, 135),rgb(248, 86, 5));
+        }
+        .multi-gradient-2{
+            background-image: linear-gradient(90deg,violet 10%,rgb(9, 221, 240),rgb(161, 5, 161)98% );
+            
+        }
+        .multi-gradient-3{
+            background-image: linear-gradient(violet 10%,rgb(9, 221, 240),rgb(161, 5, 161)90% );
+        }
+        .radial_gradient{
+            background-image: radial-gradient(rgb(242, 116, 247), rgb(72, 33, 243));
+        }
+        .radial_gradient-1{
+            background-image: radial-gradient(at top left, green, rgb(247, 251, 5));
+        }
+             /* ------- hover------ */
+
+
+        .multi-gradient-2:hover{
+            
+            background-image: linear-gradient(violet 10%,rgb(9, 221, 240),rgb(161, 5, 161)90% );
+        }
+    </style>
+</head>
+<body>
+    <h1>Hellou DZ</h1>
+
+    <div class="wrapper">
+        <a class="bottom simple_gradient" href="#">click</a>
+        <span>1 линейный градиент из двух цветов.</span>
+        
+        <a class="bottom simple_gradient-2" href="#">click</a>
+        <span>2 линейный градиент из двух цветов направление в левый нижний угол.</span>
+
+        <a class="bottom simple_gradient-3" href="#">click</a>
+        <span>3 линейный градиент из двух цветов направление 45 градусов</span>
+
+        <a class="bottom simple_gradient-4" href="#">click</a>
+        <span>4 линейный градиент из двух цветов направление пр. верх. угол</span>
+
+        <a class="bottom multi-gradient" href="#">click</a>
+        <span>5 линейный градиент из трех цветов по горизонтали</span>
+
+        <a class="bottom multi-gradient-2 with-slow-ittransition" href="#">click</a>
+        <span>6 линейный градиент из трех цветов по вертикали</span>
+
+        <a class="bottom multi-gradient-3" href="#">click</a>
+        <span>7 Просто красивый линейный градиент из трех цветов по горизонтали</span>
+
+        <a class="bottom radial_gradient" href="#">click</a>
+        <span>8 Радиальный  градиент из 2 цветов от центра к краю</span>
+
+        <a class="bottom radial_gradient-1" href="#">click</a>
+        <span>9 Радиальный  градиент из 2 цветов от лев.верх угла </span>
+
+    </div>
+    </body>
+</html>

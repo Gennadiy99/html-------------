@@ -1,0 +1,21 @@
+
+
+*{
+    font-family: Roboto, sans-serif;
+}
+.wrapper {
+    margin: 40px;
+}
+.btn {
+    display: block;
+    width: 250px;
+    margin-right:20px;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    background-color: darkred;
+    color: #fff;
+    font-weight:900;
+    text-decoration: none;
+    text-transform: uppercase; /* Стиль-Все буквы большие */
+    text-align: center;
+}

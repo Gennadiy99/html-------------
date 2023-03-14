@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsevdoElements</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/34b6d3e7be.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style/may.css">
+</head>
+<style>
+    
+   p{
+    font-family: Roboto, sans-serif;
+   }
+   .first-letter > p::first-letter {
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 2rem;
+     color: red;
+   }
+   .first-line > p::first-line{
+    font: bold 20px Tahoma,sans-serif;
+    color: blueviolet;
+   }
+   .after > .discount::after{
+    content: "--> DISCOUNT";
+    color: red;
+    font-style: italic;
+   }
+   .before > ul{
+    list-style: none;
+
+   }
+   .before > ul > li::before {
+    content: "\270E";
+    padding-right: 7px;
+    color: rgb(249, 49, 4);
+   }
+   .before > ul > li:hover::before {
+    content: "\270B";
+    padding-right: 7px;
+    color: rgb(249, 49, 4);
+   }
+   
+</style>
+<body>
+    <div class="first-letter">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores at nobis rem deleniti deserunt dicta ipsam nihil aut repellat debitis architecto nisi sit, voluptate ut quos, magnam voluptatum est voluptatem quaerat! Veniam recusandae vero animi, dolores quos excepturi fugit placeat nemo, voluptatibus voluptates officiis ab necessitatibus culpa, corporis rem consequuntur!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores at nobis rem deleniti deserunt dicta ipsam nihil aut repellat debitis architecto nisi sit, voluptate ut quos, magnam voluptatum est voluptatem quaerat! Veniam recusandae vero animi, dolores quos excepturi fugit placeat nemo, voluptatibus voluptates officiis ab necessitatibus culpa, corporis rem consequuntur!</p>
+    </div>
+    <div class="first-line">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita tenetur aut laboriosam animi? Non quae sed voluptas possimus veniam fugit, quaerat nihil dolore ullam officia aperiam consequatur tempore earum ad vel repellendus nam at animi ex maiores ut saepe? Fuga rem laudantium incidunt earum vel similique reprehenderit, tempora quibusdam iusto.</p>
+        <p>A id ipsum culpa voluptatibus qui molestias veritatis magni nesciunt nihil dolor quo exercitationem ullam, earum provident mollitia, cupiditate quam nobis minima quod et sequi aliquam autem odit dolorum? Assumenda animi atque similique omnis, explicabo, debitis alias natus sit eum, laborum quas sapiente dolorem deleniti mollitia inventore. Blanditiis, nam magni!</p>
+    </div>
+    <div class="after">
+        <p class="discount">Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit.</p>
+    </div>
+    <div class="before">
+        <ul>
+            <li>Lorem, ipsum.</li>
+            <li>Qui, esse.</li>
+            <li>Veniam, necessitatibus?</li>
+            <li>Aliquid, tenetur!</li>
+            <li>A, voluptas!</li>
+        </ul>
+    </div>
+
+
+
+    <!-- ::first-letter - Первую букву элемента делает Большой и можно задать ей стиль
+         ::first-line   - Стилим первую строку текста. при маштабировании стиль остается только на строке
+         :: after - добавляют к єлементу контент после
+         ::before - 
+        
+        -->
+        
+    <a class="btn btn-extra" href="../index.html">Home</a>
+</body>
+</html>
